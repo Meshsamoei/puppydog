@@ -1459,14 +1459,3 @@
 </body>
 
 </html>
-<div class="prediction-fill" style="width: ${percent}%"></div>
-</div>
-`; elements.predictionBars.appendChild(item); }); // Update top confidence badge const topProb = predictions[0].probability; elements.topConfidence.textContent = `${Math.round(topProb * 100)}%`; elements.topConfidence.style.background = topProb > 0.8
-? 'var(--success)' : topProb > 0.6 ? 'var(--accent)' : 'var(--warning)'; // Show results with animation elements.resultsContainer.classList.add('active'); // Scroll to results on mobile if (window.innerWidth
-< 900) { elements.resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } } //=====R ESET & UTILITIES=====f unction resetApp() { stopCamera(); resetPreview(); state.mode='upload' ; elements.modeBtns.forEach(b=> b.classList.remove('active')); document.querySelector('[data-mode="upload"]').classList.add('active'); updateUIForMode(); showStatus('Reset complete! Start over with a new image.', 'info'); } // ===== START APP ===== document.addEventListener('DOMContentLoaded',
-    init); // ===== SERVICE WORKER FOR OFFLINE SUPPORT (Optional Enhancement) ===== // Note: For puppydog.gt.tc, you'd register a service worker separately // This is a placeholder for future PWA enhancement if ('serviceWorker' in navigator) { window.addEventListener('load',
-    () => { // navigator.serviceWorker.register('/sw.js') // .then(reg => console.log('SW registered:', reg.scope)) // .catch(err => console.log('SW registration failed:', err)); }); }
-    </script>
-    </body>
-
-    </html>
